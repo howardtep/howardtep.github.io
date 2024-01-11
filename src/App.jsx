@@ -1,7 +1,14 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./Home";
+import Crypto from "./crypto/Crypto";
+
+const router = createBrowserRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/crypto", element: <Crypto /> },
+]);
+
 function App() {
-  return (
-    <h1>React Template</h1>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
